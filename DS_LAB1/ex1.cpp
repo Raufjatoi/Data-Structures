@@ -8,7 +8,7 @@ int main() {
     int num1 = 3;
     int num2 = 2;
 
-    cout << "The addition of " << num1 << " and " << num2 << " is " << num1 + num2 << endl;
+    cout << "addition of " << num1 << " and " << num2 << " is " << num1 + num2 << endl;
 
     return 0;
 }
