@@ -21,8 +21,5 @@ int main() {
     for(int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
-    
     free(arr);
-    
-    return 0;
 }

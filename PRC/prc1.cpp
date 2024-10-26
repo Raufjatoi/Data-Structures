@@ -1,20 +1,16 @@
 #include <iostream>
 using namespace std;
 
+void add (int arr [] , int size , int item){
+    for (int i = size; i > 0; i--) arr[i] = arr[i - 1];
+    arr[0] = item;
+    size++;
+}
 int main(){
-    int n = 5;
+    int nums [] = {2,3,4,5,6};
+    int size = sizeof(nums) / sizeof(nums[0]);
+    
+    add(nums , size , 1);
 
-    for (int i = 1; i <= n; i++){
-        for(int j = 1; j <= i; j++){
-            cout << "#";
-        }
-        cout << endl;
-    }
-
-    for(int i = n - 1; i>= 1; i--){
-        for (int j = 1; j <= i; j++){
-            cout << "#";
-        }
-        cout << endl;
-    }
+    for (int i = 0; i < size; i++) cout << nums[i] << " ";
 }
