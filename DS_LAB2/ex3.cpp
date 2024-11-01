@@ -10,7 +10,7 @@ void add(int nums[], int &size, int item) {
 
 int main() {
     int nums[6] = {1, 2, 3, 4, 5}; 
-    int size = 5;
+    int size = (sizeof(nums) / sizeof(nums[0])) - 1;
 
     add(nums, size, 6);
 

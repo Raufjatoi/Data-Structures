@@ -11,7 +11,7 @@ struct Node {
 
 void print (Node* n){
     while (n != nullptr){
-        cout << n->data << " ";
+        cout << n->data << " ";  
         n = n ->next; 
     }
 }
