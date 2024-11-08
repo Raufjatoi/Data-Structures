@@ -9,6 +9,18 @@ struct Node {
     Node* next;
 };
 
+void search(Node* n , int val){
+    while ( n != nullptr){
+        if (n->data == val){
+            cout << "found";
+            break;
+        }
+        n = n-> next;
+    }
+    cout << "not found";
+
+}
+
 void print (Node* n){
     while (n != nullptr){
         cout << n->data << " ";  

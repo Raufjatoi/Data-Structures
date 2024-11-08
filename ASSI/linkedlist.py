@@ -2,20 +2,19 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-
-class linkedlist:
+    
+class ll:
     def __init__(self):
         self.head = None
     
     def add(self, data):
         n = Node(data)
-        
         if self.head is None:
             self.head = n
         else:
             t = self.head
             while t.next is not None:
-                t = t.next 
+                t = t.next
             t.next = n
     
     def view(self):
@@ -28,38 +27,36 @@ class linkedlist:
                 t = t.next
             print('None')
     
-    def search(self, value):
+    def search(self, v):
+        pos = 0
         t = self.head
-        position = 0
         while t is not None:
-            if t.data == value:
-                print(f'{value} found at {position}')
+            if t.data == v:
+                print(f'{v} found at {pos}')
                 return
             t = t.next
-            position += 1
-        print(f'{value} not found')
+            pos += 1
+        print('not found')
     
-    def remove(self, value):
+    def remove(self, v):
         if self.head is None:
             print('empty')
             return
-
-        if self.head.data == value:
+        if self.head.data == v:
             self.head = self.head.next
-            print(f'{value} removed')
+            print('removed')
             return
         
         t = self.head
         while t.next is not None:
-            if t.next.data == value:
+            if t.next.data == v:
                 t.next = t.next.next
-                print(f'{value} removed')
+                print('removed')
                 return
             t = t.next
-        
         print('not found')
 
-l = linkedlist()
+l = ll()
 l.add(1)
 l.add(2)
 l.add(3)
@@ -67,4 +64,4 @@ l.view()
 l.search(2)      
 l.remove(2)
 l.view()         
-l.search(2)      
+l.search(2)
