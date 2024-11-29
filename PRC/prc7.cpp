@@ -1,4 +1,5 @@
-// linked list is a list but linked 🙂
+// singly linked list 
+
 #include <iostream>
 using namespace std;
 
@@ -6,8 +7,7 @@ class Node {
 public:
     int data;
     Node* next;
-    
-    //construct
+
     Node(int v): data(v), next(nullptr) {}
 };
 
@@ -15,17 +15,14 @@ class LinkedList{
     Node* head;
 
 public:
-    // construct
     LinkedList(): head(nullptr) {}
 
-    // add first
     void addf(int v){
         Node* n = new Node(v);
         n-> next = head;
         head = n;
     }
     
-    // add last 
     void addl(int v){
         Node* n = new Node(v);
         if (head == nullptr){

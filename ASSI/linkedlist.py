@@ -16,6 +16,11 @@ class ll:
             while t.next is not None:
                 t = t.next
             t.next = n
+
+    def addf(self , data):
+        n = Node(data)
+        n.next = self.head
+        self.head = n;
     
     def view(self):
         if self.head is None:
