@@ -1,5 +1,4 @@
 // binary search in func 
-
 #include <iostream>
 using namespace std;
 
